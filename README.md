@@ -1,33 +1,51 @@
-This project focuses on designing a custom instruction set architecture (ISA) for a RISC-V CPU, incorporating essential components such as the Program Counter (PC),
-Arithmetic Logic Unit (ALU), Register File, Control Unit, and Memory Units.
-The custom instruction set design includes a range of operations, including arithmetic, logical, load/store, and branch instructions. The goal is to document the design,
-explain the control signals and data flow, and provide a sample program to demonstrate the functionality of the custom RISC-V CPU.
-![CPU](https://github.com/MalekNafaa/Instruction-Set-Design-for-RISC-V/blob/main/Instruction%20Set%20Design%20for%20RISC-V%20photo.png?raw=true)
+# Custom RISC-V ISA Design  
 
+This project focuses on designing a **custom Instruction Set Architecture (ISA)** for a RISC-V CPU, incorporating essential components such as:  
 
-Supported Instructions
-The following RISC-V instruction types are supported:
+- **Program Counter (PC)**  
+- **Arithmetic Logic Unit (ALU)**  
+- **Register File**  
+- **Control Unit**  
+- **Memory Units**  
 
-**Arithmetic Instructions (R-type):
-**
-add: Adds the values of two registers and stores the result in a third register.
-sub: Subtracts the value of one register from another and stores the result in a third register.
+The custom ISA includes a range of operations—**arithmetic, logical, load/store, and branch instructions**—with detailed documentation on the design, control signals, data flow, and a sample program to demonstrate functionality.  
 
-**Logical Instructions (R-type):
-**
-and: Performs a logical bit-wise AND operation between the values of two registers.
+![CPU Architecture](https://github.com/MalekNafaa/Instruction-Set-Design-for-RISC-V/blob/main/Instruction%20Set%20Design%20for%20RISC-V%20photo.png?raw=true)  
 
-**Branch Instructions (B-type):
-**
-beq: Branches to a specified address if the values in two registers are equal.
-blt: Branches to a specified address if the value in the first register is less than the value in the second register.
+---
 
-**Load/Store Instructions (I-type, S-type):
-**
-lw: Loads a word from memory into a register.
-sw: Stores a word from a register into memory.
-addi: Adds an immediate value to a register's value and stores the result in the specified register.
+## 📜 Supported Instructions  
 
-**Instruction Format
-**Each instruction type adheres to the RISC-V instruction formats (R-type, I-type, S-type, B-type) and utilizes the opcode, funct3, and funct7 fields for decoding.
+### **Arithmetic Instructions (R-type)**  
+| Instruction | Description |
+|-------------|-------------|
+| `add`  | Adds the values of two registers and stores the result in a third register. |
+| `sub`  | Subtracts the value of one register from another and stores the result in a third register. |
 
+### **Logical Instructions (R-type)**  
+| Instruction | Description |
+|-------------|-------------|
+| `and`  | Performs a bit-wise AND between two registers. |
+
+### **Branch Instructions (B-type)**  
+| Instruction | Description |
+|-------------|-------------|
+| `beq`  | Branches to a specified address if two registers are equal. |
+| `blt`  | Branches to a specified address if the first register is less than the second. |
+
+### **Load/Store Instructions (I-type, S-type)**  
+| Instruction | Description |
+|-------------|-------------|
+| `lw`   | Loads a word from memory into a register. |
+| `sw`   | Stores a word from a register into memory. |
+| `addi` | Adds an immediate value to a register's value and stores the result in the specified register. |
+
+---
+
+## 🖥️ Instruction Format  
+All instructions follow **RISC-V standard formats** (R-type, I-type, S-type, B-type), utilizing:  
+- **Opcode**  
+- **Funct3**  
+- **Funct7**  
+
+for proper decoding and execution.  
